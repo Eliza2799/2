@@ -1,0 +1,13 @@
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/run/dbus/system_bus_socket"}, 29) = 0
+getsockname(3, {sa_family=AF_UNIX}, [128 => 2]) = 0
+sendto(3, "\0", 1, MSG_NOSIGNAL, NULL, 0) = 1
+sendto(3, "AUTH EXTERNAL 31303030\r\n", 24, MSG_NOSIGNAL, NULL, 0) = 24
+sendto(3, "NEGOTIATE_UNIX_FD\r\n", 19, MSG_NOSIGNAL, NULL, 0) = 19
+sendto(3, "BEGIN\r\n", 7, MSG_NOSIGNAL, NULL, 0) = 7
+sendmsg(3, {msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="l\1\0\1\0\0\0\0\1\0\0\0n\0\0\0\1\1o\0\25\0\0\0/org/fre"..., iov_len=128}, {iov_base="", iov_len=0}], msg_iovlen=2, msg_controllen=0, msg_flags=0}, MSG_NOSIGNAL) = 128
+recvmsg(3, {msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="l\2\1\1\v\0\0\0\1\0\0\0=\0\0\0\6\1s\0\6\0\0\0:1.201\0\0"..., iov_len=2048}], msg_iovlen=1, msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_CMSG_CLOEXEC) = 262
+recvmsg(3, {msg_namelen=0}, MSG_CMSG_CLOEXEC) = -1 EAGAIN (Resource temporarily unavailable)
+sendmsg(3, {msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="l\1\0\0013\0\0\0\2\0\0\0\177\0\0\0\1\1o\0\25\0\0\0/org/fre"..., iov_len=144}, {iov_base=".\0\0\0type='signal',interface='org"..., iov_len=51}], msg_iovlen=2, msg_controllen=0, msg_flags=0}, MSG_NOSIGNAL) = 195
+recvmsg(3, {msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="l\2\1\1\0\0\0\0\3\0\0\0005\0\0\0\6\1s\0\6\0\0\0:1.201\0\0"..., iov_len=2048}], msg_iovlen=1, msg_controllen=0, msg_flags=MSG_CMSG_CLOEXEC}, MSG_CMSG_CLOEXEC) = 72
+recvmsg(3, {msg_namelen=0}, MSG_CMSG_CLOEXEC) = -1 EAGAIN (Resource temporarily unavailable)

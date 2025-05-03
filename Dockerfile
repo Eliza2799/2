@@ -26,3 +26,13 @@ RUN cd ~ && \
 
 # Verify Build and Install
 CMD dbus-daemon --system --nofork
+FROM debian:latest
+
+RUN apt update && apt install -y gcc dbus libdbus-1-dev
+
+WORKDIR /app
+COPY . .
+
+RUN gcc -o event_monitor event_monitor.c `pkg-config --cflags --libs dbus-1`
+
+CMD ["./event_monitor"]
